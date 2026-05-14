@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Database
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Test files (keep test scripts but not results)
+test_*.py
+!backend/tests/test_*.py
+
+# Sensitive data
+*.pem
+*.key
+*.cert
+credentials.json
+secrets.yaml
+
+# Node.js / Frontend
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+.npm
+.eslintcache
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Backend specific
+backend/idmc_profiling.db*
+backend/alembic/versions/*.pyc
+backend/recreate_db.py
+backend/create_missing_tables.py
+backend/test_*.py
+!backend/tests/
+
+# Frontend specific
+frontend/.env.local
+frontend/.env.production
+frontend/.env.development.local
+
+# Documentation build
+docs/_build/

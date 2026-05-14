@@ -1,0 +1,151 @@
+========================================
+QUICK PUBLISH COMMANDS - COMPLETE SETUP
+========================================
+
+Repository: https://github.com/rnsobral-sfdc/Infa_IDMC_CP_Profiling_Warehouse
+
+========================================
+OPTION 1: AUTOMATED (RECOMMENDED)
+========================================
+
+STEP 1: Stop servers
+   - Press Ctrl+C in backend terminal
+   - Press Ctrl+C in frontend terminal
+
+STEP 2: Run the script
+
+Windows:
+   cd C:\Temp\Claude\ProfilingReport
+   .\CLEAN_AND_PUBLISH.bat
+
+macOS/Linux:
+   cd /path/to/ProfilingReport
+   ./CLEAN_AND_PUBLISH.sh
+
+The script will:
+✓ Clean sensitive data
+✓ Initialize git (if needed)
+✓ Register remote repository
+✓ Resolve LICENSE to Apache 2.0
+✓ Stage all changes
+✓ Show you what will be committed
+✓ Create commit with disclaimer
+✓ Push to GitHub
+
+========================================
+OPTION 2: MANUAL COMMANDS
+========================================
+
+cd C:\Temp\Claude\ProfilingReport
+
+# Initialize git (if not already done)
+git init
+
+# Add remote repository
+git remote add origin https://github.com/rnsobral-sfdc/Infa_IDMC_CP_Profiling_Warehouse.git
+
+# Or update remote if already exists
+git remote set-url origin https://github.com/rnsobral-sfdc/Infa_IDMC_CP_Profiling_Warehouse.git
+
+# Verify remote
+git remote -v
+
+# Set main branch
+git branch -M main
+
+# Resolve LICENSE conflict (use Apache 2.0)
+git checkout --theirs LICENSE
+
+# Stage all changes
+git add .
+
+# Create commit
+git commit -m "Update: Apache License 2.0 with educational disclaimer" -m "- Added disclaimer to README" -m "- Changed to Apache License 2.0" -m "- Cleaned sensitive data"
+
+# Push to GitHub
+git push -u origin main
+
+========================================
+CREDENTIALS
+========================================
+
+When prompted:
+   Username: rnsobral-sfdc
+   Password: <YOUR_PERSONAL_ACCESS_TOKEN>
+
+Don't have a PAT?
+   1. Go to: https://github.com/settings/tokens
+   2. Click "Generate new token (classic)"
+   3. Name it: "IDMC Profiling Extractor"
+   4. Select scope: ☑ repo
+   5. Generate and copy the token
+   6. Use it as the password
+
+========================================
+WHAT'S INCLUDED
+========================================
+
+✓ Source code (Python backend, React frontend)
+✓ Documentation (README, SETUP, guides)
+✓ LICENSE (Apache 2.0)
+✓ .gitignore (excludes sensitive data)
+✓ Configuration templates (.env.example)
+
+========================================
+WHAT'S EXCLUDED (AUTOMATIC)
+========================================
+
+✗ idmc_profiling.db (database with your data)
+✗ .env files (your credentials)
+✗ venv/ (Python virtual environment)
+✗ node_modules/ (Node dependencies)
+✗ __pycache__/ (Python cache)
+✗ .next/ (Next.js build)
+
+These are automatically excluded by .gitignore
+Even if locked/in use, they WON'T be committed!
+
+========================================
+VERIFY AFTER PUBLISHING
+========================================
+
+1. Visit: https://github.com/rnsobral-sfdc/Infa_IDMC_CP_Profiling_Warehouse
+
+2. Check:
+   ✓ README shows disclaimer at top
+   ✓ LICENSE is Apache 2.0
+   ✓ No .db files visible
+   ✓ No .env files visible
+   ✓ Source code is present
+
+3. Optional: Add repository topics
+   - Click ⚙ next to About
+   - Add: python, fastapi, react, nextjs, informatica,
+          data-quality, star-schema, sqlite, apache-license
+
+========================================
+TROUBLESHOOTING
+========================================
+
+Error: "Repository not found"
+   → Ensure repository exists on GitHub
+   → Check you're using correct username
+   → Verify remote URL is correct
+
+Error: "Remote contains work you don't have"
+   → Run: git pull origin main --allow-unrelated-histories
+   → Then: git push -u origin main
+
+Error: "Authentication failed"
+   → Use PAT (Personal Access Token), not password
+   → Create new PAT at github.com/settings/tokens
+
+Error: "Permission denied"
+   → Check you have write access to repository
+   → Verify you're logged into correct GitHub account
+
+========================================
+
+Ready? Run .\CLEAN_AND_PUBLISH.bat now!
+
+========================================

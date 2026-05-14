@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(curl -s http://127.0.0.1:8000/docs)",
+      "Bash(pkill -f \"python.*mock_api/server.py\")",
+      "Bash(taskkill //F //IM python.exe //FI \"WINDOWTITLE eq *server.py*\")",
+      "Bash(curl -s -X POST http://127.0.0.1:8000/connections/1/test)",
+      "Bash(netstat -ano)",
+      "Bash(awk '{print $5}')",
+      "Bash(taskkill *)",
+      "Bash(curl -s http://localhost:8001/api/v2/login -X POST -H \"Content-Type: application/json\" -d '{\"username\":\"test\",\"password\":\"test\"}')",
+      "Bash(curl -s http://localhost:8001/api/v2/user/info -H \"icSessionId: 5bb279e2-13f6-47d4-a90e-cbec1d9e0095\")",
+      "Bash(curl -v http://localhost:8001/api/v2/user/info -H \"icSessionId: 5bb279e2-13f6-47d4-a90e-cbec1d9e0095\")",
+      "Bash(curl -s http://localhost:8001/api/v2/user/info -H \"icSessionId: 22e19b13-95d8-4aac-9afb-f335dd197ad6\")",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs -r kill -9)",
+      "Bash(tasklist)",
+      "Bash(findstr python *)",
+      "Bash(xargs -I {} taskkill //F //PID {})",
+      "Bash(curl -X POST https://dm-us.informaticacloud.com/identity-service/api/v1/Login -H 'Content-Type: application/json' -d '{ *)",
+      "WebFetch(domain:docs.informatica.com)",
+      "Bash(sqlite3 idmc_profiling.db \"SELECT COUNT\\(*\\) FROM dim_profiling_task; SELECT COUNT\\(*\\) FROM dim_profiling_run; SELECT COUNT\\(*\\) FROM fact_profiling_result;\")",
+      "Bash(sqlite3 profiling_warehouse.db \".schema idmc_connections\")",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s http://localhost:3002)",
+      "Bash(npm list *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:8000/sync-jobs/1/status)",
+      "Bash(curl -s http://localhost:8000/sync-jobs/1/runs)",
+      "Bash(sqlite3 dqwh.db \"UPDATE sync_job_runs SET status='FAILED', error_message='Cleaned up stuck run' WHERE status='RUNNING';\")",
+      "Bash(pkill *)",
+      "Bash(curl -s \"http://localhost:8000/profiling/tasks-summary?search=&project_name=&folder_name=&created_by=&date_from=&date_to=\")",
+      "Bash(curl -s -X POST http://localhost:8000/connections/1/purge)",
+      "Bash(curl -s http://localhost:8000/connections/)",
+      "Bash(curl *)"
+    ]
+  }
+}
